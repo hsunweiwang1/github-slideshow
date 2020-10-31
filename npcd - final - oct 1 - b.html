@@ -1,0 +1,623 @@
+<!-- THIS EMAIL WAS BUILT AND TESTED WITH LITMUS http://litmus.com -->
+<!-- IT WAS RELEASED UNDER THE MIT LICENSE https://opensource.org/licenses/MIT -->
+<!-- QUESTIONS? TWEET US @LITMUSAPP -->
+<!doctype html>
+<html>
+<head>
+<title></title>
+    
+
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">   
+    
+<style type="text/css">
+
+u + .body .gmail{
+    display:block !important;
+}
+
+.p_yahoo {
+    margin-bottom: 1em;
+}
+    
+/* FONT EMBED */
+@font-face {
+    font-family: 'Publico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PublicoMedium'), url(https://linkTo_PublicoMedium.otf) format('otf');
+}
+    
+@font-face {
+    font-family: 'AvenirNextLTPro';
+    font-style: normal;
+    font-weight: 100;
+    src: local('AvenirRegular'), url(https://linkTo_AvenirNextLTPro-Regular.otf) format('otf');
+}
+        
+@font-face {
+    font-family: 'AvenirNextLTPro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('AvenirBold'), url(https://linkTo_AvenirNextLTPro-Bold.otf) format('otf');
+}
+     
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6D6MmBp0u-zK4.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}    
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+    
+    
+/* CLIENT-SPECIFIC STYLES */
+body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+img { -ms-interpolation-mode: bicubic; }
+
+/* RESET STYLES */
+img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+table { border-collapse: collapse !important; }
+body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+/* iOS BLUE LINKS */
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* MOBILE STYLES */
+    
+@media screen and (max-width: 480px) {
+    u + .body .full-wrap { 
+        width:100% !important;
+        width:100vw !important;
+    }
+}
+    
+@media screen and (max-width: 600px) {
+	        
+    .mobile-dataTableTD {
+        font-size: 14px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+            
+    .mobile-dataTableTD_lt {
+        font-size: 14px !important;
+        padding-left: 20px !important;
+    }
+                
+    .mobile-dataTableTD_lt_2 {
+        font-size: 14px !important;
+        padding-left: 20px !important;
+    }
+        
+    .mobile-dataTableTD_rt {
+        font-size: 14px !important;
+        padding-right: 20px !important;
+    }
+
+    .img-max {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .max-width {
+        max-width: 100% !important;
+    }
+
+    .mobile-wrapper {
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+       
+        display: block !important;
+        float: left !important;
+
+    }
+    
+    
+    /* td[id=mobile-header] { */
+    
+    #mobile-header {
+        font-family: 'Pacifico' !important;
+        display:block;
+        background-image: url("https://www.gsb-docs.com/resources/r00003114v01.png") !important;
+        background-repeat: no-repeat !important;
+        background-position: top left !important;        
+        background-size: cover !important;
+    }   
+    
+    #mobile-header-2 {    
+        display: none !important;
+    }
+    
+    .houdini {
+        opacity: 0 !important;
+        width: 10px !important;
+        height: 10px !important;
+        visibility: hidden !important;
+        display: none !important;
+    }
+    
+    .houdini_2 {
+    	opacity: 0 !important;
+        display: none !important;
+        visibility: none !important;
+        width: 0 !important;
+    }
+    
+    .houdini_3 {
+        width: 100% !important;
+    }   
+    
+    .mobile-table {
+        
+        width: 90% !important;
+        text-align: left !important;
+    }
+    
+    .mobile-contact {        
+        border-left: none !important;
+        border-top: 1px solid #a6a5a5 !important;
+        padding-top: 30px !important;
+        padding-right: 0px !important;
+        padding-bottom: 30px !important;  
+        padding-left: 20px !important;
+        
+    }
+    
+    .mobile-contact-2 {
+    	border-left: none !important;
+        border-top: 1px solid #a6a5a5 !important;       
+        padding-top: 30px !important;
+        padding-right: 0px !important;
+        padding-bottom: 20px !important;  
+        padding-left: 20px !important;       
+    }
+    
+    .mobile-contact-3 {
+        padding-left: 0 !important;
+    }
+        
+    .mobile-contact-4 {
+    	padding-top: 15px !important;
+        padding-right: 0px !important;
+        padding-bottom: 30px !important;  
+        padding-left: 20px !important;
+        text-align: left !important;
+    }
+    
+    .mobile-contact-5 {
+        text-align: left !important;
+    }
+    
+    .mobile-contact-clickToCall {
+        width: 222px !important;
+        height: 49px !important;
+    }
+         
+    .mobile-contact-LogIn {
+        width: 139px !important;
+        height: 45px !important;
+    }
+    
+    .mobile-contact-social {
+        width: 47px !important;
+        height: 48px !important;
+    }
+    
+    .mobile-padding {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    .mobile-paragraph {
+        padding-left: 20px !important;
+    }
+}
+
+    
+    
+/* ANDROID CENTER FIX */
+div[style*="margin: 16px 0;"] { margin: 0 !important; }
+</style>
+
+
+</head>
+    
+    
+    
+<body class="body" style="margin: 0 !important; padding: 0; !important background-color: #ffffff;" bgcolor="#ffffff">
+    
+<!--[if mso]>
+<style type="text/css">
+    body, table, td {
+        font-family: Arial, Helvetica, Calibri, sans-serif !important;
+    }
+</style>
+<![endif]-->
+    
+<!-- HIDDEN PREHEADER TEXT -->
+<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Open Sans, Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+    Lorem ipsum dolor que ist
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="full-wrap">
+
+    
+    <tr>
+    <td bgcolor="#ffffff" style="background: #ffffff;" align="center" height="100%" valign="top" width="100%">
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+    <tr>
+    <td align="center" valign="top" width="600">
+    <![endif]-->
+
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+    
+    <tr>
+        <td bgcolor="#ffffff" align="left" height="100%" valign="top" width="100%">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="left" border="0" cellspacing="0" cellpadding="0" width="560">
+            <tr>
+            <td align="left" valign="top" width="560">
+            <![endif]-->
+         
+            <div>
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" valign="top" style="padding: 40px 50px 0px 20px;">
+                            <a href="https://www.marcus.com/us/en" target="_blank"><img src="https://www.gsb-docs.com/resources/r00003071v01.png" height="31" width="98" style="border:none; text-decoration: none;" alt="Marcus by Goldman Sachs®" /></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+        
+    <tr>
+        <td bgcolor="#ffffff" style="background: #ffffff; padding-top: 16px;" align="center" height="100%" valign="top" width="100%">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                <tr> 
+                   <td bgcolor="#ffffff" align="left" valign="top" width="360" style="max-width:60%; min-width:1%; font: 0; padding:0; margin: 0;" class="max-width"> 
+                        <span>
+                            <a href="https://www.marcus.com/us/en" target="_blank">
+                                <img class="houdini_3" src="https://www.gsb-docs.com/resources/r00003115v01.png" width="360" height="283" border="0" style="text-decoration:none;" alt="Introducing a CD you can access before maturity–with no penalty!">
+                            </a>
+                        </span>
+                    </td>
+
+                    <td class="houdini_2" bgcolor="#ffffff" width="240" align="right" valign="top" style="max-width:40%; min-width:1%; font: 0; padding:0; margin: 0;"> 
+                        <span>
+                            <a href="https://www.marcus.com/us/en" target="_blank">
+                                <img class="houdini" src="https://www.gsb-docs.com/resources/r00003116v01.png" width="240" height="283" border="0" style="text-decoration:none;" alt="">
+                            </a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>          
+
+    <tr>
+        <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+         
+            <div>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="93%" style="max-width:560px;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" valign="top" style="font-family: Open Sans, Arial, Helvetica, sans-serif !important; color: #15375E; font-size: 15px; line-height: 20px; padding: 0 0 35px 0px;">
+                                Hi, <strong>Maria</strong>!<br />Add some flexibility to your savings strategy. Our new <strong>No-Penalty CD</strong> gives you the power of a guaranteed high rate plus the option to withdraw your full balance beginning 7 days after funding – with <strong>no risk of a penalty and no questions asked.</strong><br /><br />
+                                Finally, a CD that lets you withdraw early. Because it’s your money, after all. 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+     
+    <tr>       
+        <td background="images/table_bg_tile.png" bgcolor="#F5F5F5" style="background: url('images/table_bg_tile.png'); repeating-linear-gradient(45deg,#eeeeee,#eeeeee .5px,#ffffff 2px,#ffffff 10px); background-repeat: repeat;" align="center" height="100%" valign="top" width="100%">
+            
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+            
+            <div>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="93%" style="max-width:560px;">
+                    <tr>
+                        <td class="gmail" height="20" width="100%" align="center" valign="top" style=" max-width:560px; height:20px;">&nbsp;</td>
+                    </tr>
+                    
+                    <tr>
+                        <td bgcolor="#ffffff" align="center" valign="top" style="border:1px solid #E4E5E7;" >
+
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;">
+                                <tr>
+                                    <td width="100%" bgcolor="#ffffff" align="center" valign="top" style="background:#ffffff; font-size:0; padding-top: 40px; padding-bottom: 10px; max-width:560px;">    
+
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="560">
+                                        <tr>
+                                        <td align="left" valign="top" width="560" style="padding-top: 0; padding-bottom: 10px;">
+                                        <![endif]-->
+                                        
+                                        <div style="display:inline-block; max-width:100%; vertical-align:top; width:100%;">
+
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:560px;" class="max-width">
+                                                
+                                                <tr>
+                                                    <td class="mobile-dataTableTD_lt" width="55%" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #15375E; font-size: 16px; line-height: 17px; padding: 0px 20px 10px 60px; width:55%;" ><strong>11-month <span style="white-space: nowrap;">No-Penalty CD:</span></strong></td>
+                                                    <td class="mobile-dataTableTD_rt" width="45%" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #29A0CC; font-size: 16px; line-height: 17px; padding: 0px 60px 10px 20px; width:45%;">1.95% APY</td>
+                                                </tr>
+                                                <tr><td colspan="2" class="mobile-dataTableTD" style="padding-left:50px; padding-right:50px;" ><hr style="border: 1px solid #E4E5E7"></td></tr>                                                
+                                                <tr>
+                                                    <td class="mobile-dataTableTD_lt" width="55%" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #15375E; font-size: 16px; line-height: 17px; padding: 10px 20px 10px 60px; width:55%;"><strong>Minimum deposit:</strong></td>
+                                                    <td class="mobile-dataTableTD_rt"  width="45%" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #29A0CC; font-size: 16px; line-height: 17px; padding:10px 60px 10px 20px; width:45%;">$500</td>
+                                                </tr>
+                                                <tr><td colspan="2" class="mobile-dataTableTD" style="padding-left:50px; padding-right:50px;" ><hr style="border: 1px solid #E4E5E7"></td></tr>                            
+                                                <tr>
+                                                    <td class="mobile-dataTableTD_lt"  width="55%" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #15375E; font-size: 16px; line-height: 17px; padding: 10px 20px 10px 60px; width:55%;"><strong>Early withdrawal penalty:</strong></td>
+                                                    <td class="mobile-dataTableTD_rt"  width="45%" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #29A0CC; font-size: 16px; line-height: 17px; padding:10px 60px 10px 20px; width:45%;">$0</td>
+                                                </tr>
+                                                <tr><td colspan="2" class="mobile-dataTableTD" style="padding-left:50px; padding-right:50px;" ><hr style="border: 1px solid #E4E5E7"></td></tr>
+
+                                                <tr>
+                                                    <td class="mobile-dataTableTD_lt"  align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #15375E; font-size: 16px; line-height: 17px; padding: 10px 20px 10px 60px; width:55%;"><strong>FDIC insured</strong></td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="2"  class="mobile-dataTableTD_lt_2" align="left" valign="top" style="font-size: 12px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #808C99; line-height: 17px; text-decoration: none; padding: 10px 0 25px 60px;">Other terms and rates are available. Visit <a href="https://www.marcus.com/us/en" target="_blank" style="color: #808C99; text-decoration: underline;">marcus.com</a> to learn more.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                   <td colspan="2" bgcolor="#ffffff" align="center" valign="top" style="background:#ffffff; font-size:20; color:#000000; padding-bottom: 25px;">
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="200">
+                                                            <tr>
+                                                                <td align="center" valign="top" width="200">
+                                                                    
+                                                                    <a href="https://www.marcus.com/us/en" target="_blank" style="display: block;"><img src="https://www.gsb-docs.com/resources/r00003105v01.png" height="40" width="200" style="border:none; text-decoration: none;" alt="Learn more" /></a>                                                                   
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        
+                                        <!--[if (gte mso 9)|(IE)]>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        <![endif]-->
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="gmail" height="20" width="100%" align="center" valign="top" style=" max-width:560px; height:20px;">&nbsp;</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>        
+            
+    <tr>
+        <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+         
+            <div>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="93%" style="max-width:560px;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #15375E; font-size: 12px; line-height: 17px; padding: 35px 0 35px 0px;">
+                            A one-time withdrawal of full balance plus all interest earned is allowed – penalty-free – any time after the first 7 days of funding. Annual Percentage Yield (APY) as of Date 00, 2018. Maximum balance limits apply. APY may change before a CD is opened and funded.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+        
+    <tr>
+        <td bgcolor="#15375E" style="background: #15375E; padding: 15px 0 10px;" align="left" height="100%" valign="top" width="100%">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+            <tr>
+            <td align="center" valign="top" width="500">
+            <![endif]-->
+            
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;" class="mobile-table">
+                <tr>
+                    <td align="left" valign="top" style="max-width:600px; font-size:0; padding-left: 0; text-align:center;" class="mobile-contact-5">
+                        
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="center" border="0" cellspacing="0" cellpadding="0" width="500">
+                        <tr>
+                        <td align="left" valign="top" width="190">
+                        <![endif]-->
+                        
+                        <div style="display:inline-block; vertical-align:top;" class="mobile-wrapper">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" class="max-width">
+                               <tr>
+                                   <td align="left" valign="top" style="padding-top: 7px; padding-right: 20px; padding-bottom: 10px; padding-left: 35px;" class="mobile-contact-4">
+                                       <a href="tel:18557307283"><img src="https://www.gsb-docs.com/resources/r00003104v01.png" height="38" width="170" border="0" style="display: inline;" class="mobile-contact-clickToCall" alt="Click to Call; 8 am - 10 pm ET (Mon - Fri); 9 am - 7 pm ET (Sat - Sun)" /></a>
+                                    </td>                                   
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        <td width="15" style="font-size: 1px;">&nbsp;</td>
+                        <td align="left" valign="top" width="160">
+                        <![endif]-->
+                        
+                        <div style="display:inline-block; vertical-align:top;" class="mobile-wrapper">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="" class="max-width">
+                                <tr>
+                                   <td align="left" valign="top" style="border-left: 1px solid #a6a5a5; padding-top: 8px; padding-right: 20px; padding-bottom: 8px; padding-left: 20px;" class="mobile-contact">
+                                       <a href="https://www.marcus.com/us/en" target="_blank"><img src="https://www.gsb-docs.com/resources/r00003108v01.png" height="34" width="106" border="0" style="display: inline;" class="mobile-contact-LogIn" alt="Log in at Marcus.com" /></a>
+                                    </td>                                    
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        <td width="15" style="font-size: 1px;">&nbsp;</td>
+                        <td align="left" valign="top" width="150">
+                        <![endif]-->
+                        
+                        <div style="display:inline-block; vertical-align:top;" class="mobile-wrapper">
+                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="" class="max-width">
+                                <tr>
+                                    <td align="left" valign="top" style="border-left: 1px solid #a6a5a5; padding-top: 6px; padding-right: 20px; padding-bottom: 6px; padding-left: 20px;" class="mobile-contact-2">
+                                        
+                                        <table align="left">
+                                            <tr>
+                                                <td align="left" valign="top" style="padding-left: 0; padding-right: 15px;" class="mobile-contact-3">
+                                                    <a href="https://twitter.com/" target="_blank"><img src="https://www.gsb-docs.com/resources/r00003109v02.png" height="36" width="36" border="0" style="display: inline;" alt="Twitter" class="mobile-contact-social" /></a>
+                                                </td>
+                                                <td align="left" valign="top" style="padding-left: 0; padding-right: 15px;">
+                                                    <a href="https://www.youtube.com/" target="_blank"><img src="https://www.gsb-docs.com/resources/r00003110v02.png" height="36" width="36" border="0" style="display: inline;" alt="Youtube" class="mobile-contact-social" /></a>
+                                                </td>
+                                                <td align="left" valign="top" style="padding-left: 0; padding-right: 15px;">
+                                                    <a href="https://www.facebook.com/" target="_blank"><img src="https://www.gsb-docs.com/resources/r00003106v02.png" height="36" width="36" border="0" style="display: inline;" alt="Facebook" class="mobile-contact-social" /></a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>        
+
+    <tr>
+        <td bgcolor="#F5F5F5" align="center" height="100%" valign="top" width="100%">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+            <td align="center" valign="top" width="600">
+            <![endif]-->
+         
+            <div>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="93%" style="max-width:560px;">
+                    <tr>
+                        <td bgcolor="#F5F5F5" align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; color: #5A5A5A; font-size: 10px; line-height: 15px; padding: 30px 0 50px 0;">
+                            <p class="p_yahoo">Please do not respond to this email. Replies sent to this address are not read. If you have any questions, please contact us or visit <a href="https://www.marcus.com/us/en" target="_blank" style="color: #5A5A5A; text-decoration: underline;" >Marcus.com.</a></p>
+                            <p class="p_yahoo">Your privacy is important to us. View our <a href="https://www.marcus.com/us/en/privacy-policy" target="_blank" style="color: #5A5A5A; text-decoration: underline;">Privacy Policy</a> and <a href="https://www.marcus.com/content/dam/mosaic/shared/pdf/GLBA.pdf" target="_blank" style="color: #5A5A5A; text-decoration: underline;">Privacy Notice.</a></p>
+                            <p class="p_yahoo">This message is from Marcus by Goldman Sachs Savings. To unsubscribe from marketing emails from Marcus by Goldman Sachs Savings, please click <a href="https://marcus.com/us/en/savings/unsubscribe <https://marcus.com/us/en/savings/unsubscribe> https://marcus.com/us/en/savings/unsubscribe?opt_out=true&CIF=[CIF_Number]&accntnum=[Account_Number]
+" target="_blank" style="color: #5A5A5A; text-decoration: underline;">here.</a></p>
+                            <p class="p_yahoo">Marcus by Goldman Sachs manages email preferences by line of business.  This will not change your email preferences of other lines of business under Marcus by Goldman Sachs or Goldman Sachs Bank USA.</p>
+                            <p class="p_yahoo">Goldman Sachs Bank USA  |  PO Box 1978  |  Cranberry Twp., PA 16066</p>
+                            <p class="p_yahoo">Marcus by Goldman Sachs® is a brand of Goldman Sachs Bank USA, which is a wholly-owned subsidiary of The Goldman Sachs Group, Inc., a New York State-chartered bank and a member of the Federal Reserve System and FDIC. All savings deposit products provided by Goldman Sachs Bank USA.</p>
+                            <p class="p_yahoo">©2018 Goldman Sachs. All rights reserved, Member FDIC</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>        
+                
+    </table>
+    <!--[if (gte mso 9)|(IE)]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </td>
+    </tr>
+    
+</table>
+</body>
+</html>
