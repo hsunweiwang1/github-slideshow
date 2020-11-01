@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style type="text/css">
+        #rateLockUp, #rateLockUp_2, #rateLockUp_3 {
+            margin: 20px 0 0 0;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+    	var rateTitle;
+    	var rateTerm;
+        var rateTarget = 0.00;
+
+
+        function popRate_3 () {
+            // $("#rateLockUp").find(".rateTitle").text("Online Savings");
+            $("#rateLockUp_3").find(".rateTitle").text(rateTitle + " - " + rateTerm);
+            $("#rateLockUp_3").find(".rateNumber").html(rateTarget  + "<sup>%</sup>");
+        }
+
+        function popRate_2 () {
+            // $("#rateLockUp").find(".rateTitle").text("Online Savings");
+            $("#rateLockUp_2").find(".rateTitle").text(rateTitle);
+            $("#rateLockUp_2").find(".rateNumber").html(rateTarget  + "<sup>%</sup>");
+        }
+
+        function popRate () { 
+            // $("#rateLockUp").find(".rateTitle").text("Online Savings");
+            $("#rateLockUp").find(".rateTitle").text(rateTitle + " - " + rateTerm);
+            $("#rateLockUp").find(".rateNumber").html(rateTarget  + "<sup>%</sup>");
+        }
+
+        // 3rd load - loads CD
+        function loadJSON_3 () {
+
+            $.ajax({
+                // osa
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3000?orgId=GECB&orgId=0",
+                // url: "https://api.marcus.com/savings/api/v1/rates/gsProductRates".
+
+                // cd
+                url: "https://api.marcus.com/savings/api/v1/rates/productCode/3100?orgId=GECB&orgId=0",
+
+
+                //npcd - temporary only.
+                // url: "https://dev.savingsexperienceservice.cft.site.gs.com/api/v1/rates/productCode/3600",
+                // url: "https://dev.savingsexperienceservice.cft.site.gs.com/api/v1/rates/productCode/3600?orgId=GECB",
+
+
+                // npcd - final live 11/27
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3600",
+                //url: "https://api.marcus.com/savings/api/v1/rates/productCode/3600?orgId=GECB",
+
+
+                // The name of the callback parameter, as specified by the YQL service
+                jsonpCallback: 'callback',
+                jsonp: false,
+
+                // Tell jQuery we're expecting JSONP
+                dataType: "jsonp",
+
+                // Work with the response
+                success: function (result) {
+
+                    var allRates = result.productRates;
+
+                    $.each(allRates, function (index, value) {
+                        // console.log(allRates);
+                        // console.log("OrgId = " + value.orgId);
+
+                        // if (value.orgId == "GECB") {
+
+                        if (value.orgId == "GECB" && value.termLength == "12") {
+
+                            // if (value.instrumentCode == "NPCD" && value.termLength == "7") {
+
+                            rateTarget = value.apy;
+                            rateTerm = value.termName;
+                            rateTitle = value.rateLabel;
+                            popRate_3 ();
+                            console.log("loadJSON 3 / OrgId = " + value.orgId + " / apy=" + value.apy + " / rateTarget=" + rateTarget);
+                        }
+                    });
+                }
+            });
+        }
+
+        // 2nd load - loads OSA
+        function loadJSON_2 () {
+
+            $.ajax({
+                // osa
+                url: "https://api.marcus.com/savings/api/v1/rates/productCode/3000?orgId=GECB&orgId=0",
+                // url: "https://api.marcus.com/savings/api/v1/rates/gsProductRates".
+
+                // cd
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3100?orgId=GECB&orgId=0",
+
+
+                //npcd - temporary only.
+                // url: "https://dev.savingsexperienceservice.cft.site.gs.com/api/v1/rates/productCode/3600",
+                // url: "https://dev.savingsexperienceservice.cft.site.gs.com/api/v1/rates/productCode/3600?orgId=GECB",
+
+
+                // npcd - final live 11/27
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3600",
+                //url: "https://api.marcus.com/savings/api/v1/rates/productCode/3600?orgId=GECB",
+
+
+                // The name of the callback parameter, as specified by the YQL service
+                jsonpCallback: 'callback',
+                jsonp: false,
+
+                // Tell jQuery we're expecting JSONP
+                dataType: "jsonp",
+
+                // Work with the response
+                success: function (result) {
+
+                    var allRates = result.productRates;
+
+                    $.each(allRates, function (index, value) {
+                        // console.log(allRates);
+                        // console.log("OrgId = " + value.orgId);
+
+                        if (value.orgId == "GECB") {
+
+                            // if (value.orgId == "GECB" && value.termLength == "13") {
+
+                            // if (value.instrumentCode == "NPCD" && value.termLength == "7") {
+
+                            rateTarget = value.apy;
+                            rateTerm = value.termName;
+                            rateTitle = value.rateLabel;
+                            popRate_2 ();
+                            loadJSON_3 ();
+                            console.log("loadJSON 2 / OrgId = " + value.orgId + " / apy=" + value.apy + " / rateTarget=" + rateTarget + "/ rateTitle = " + rateTitle);
+                        }
+                    });
+                }
+            });
+        }
+
+
+        // 1st load - loads NPCD
+        $("document").ready(function() {
+
+            $.ajax({
+                // osa
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3000?orgId=GECB&orgId=0",
+                // url: "https://api.marcus.com/savings/api/v1/rates/gsProductRates".
+
+                // cd
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3100?orgId=GECB&orgId=0",
+
+
+                //npcd - temporary only.
+                // url: "https://dev.savingsexperienceservice.cft.site.gs.com/api/v1/rates/productCode/3600",
+                // url: "https://dev.savingsexperienceservice.cft.site.gs.com/api/v1/rates/productCode/3600?orgId=GECB",
+
+
+                // npcd - final live 11/27
+                // url: "https://api.marcus.com/savings/api/v1/rates/productCode/3600",
+                url: "https://api.marcus.com/savings/api/v1/rates/productCode/3600?orgId=GECB",
+
+
+
+                 // The name of the callback parameter, as specified by the YQL service
+                 jsonpCallback: 'callback',
+                 jsonp: false,
+
+                 // Tell jQuery we're expecting JSONP
+                 dataType: "jsonp",
+
+                 // Work with the response
+                 success: function (result) {
+
+                     var allRates = result.productRates;
+
+                     $.each(allRates, function( index, value ) {
+                         console.log(allRates);
+                         // console.log("OrgId = " + value.orgId);
+
+                         // if (value.orgId == "GECB") {
+
+                         // if (value.orgId == "GECB" && value.termLength == "13") {
+
+                         if (value.instrumentCode == "NPCD" && value.termLength == "13") {
+
+                            rateTarget = value.apy;
+                            rateTerm = value.termName;
+                            rateTitle = value.rateLabel;
+                            popRate ();
+                            loadJSON_2 ();
+                            console.log("json 1 / OrgId = " + value.orgId + " / apy=" + value.apy + " / rateTarget=" + rateTarget);
+                         }
+                     });
+                  }
+              });
+
+
+            function callback(result) {
+                console.log('callback successful');
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="rateLockUp">
+        <div class="rateTitle">Product Title</div>
+        <div class="rateNumber">0.00<sup>%</sup></div>
+        <div class="rateAPY">APY</div>
+    </div>
+
+    <div id="rateLockUp_2">
+        <div class="rateTitle">Product Title</div>
+        <div class="rateNumber">0.00<sup>%</sup></div>
+        <div class="rateAPY">APY</div>
+    </div>
+
+    <div id="rateLockUp_3">
+        <div class="rateTitle">Product Title</div>
+        <div class="rateNumber">0.00<sup>%</sup></div>
+        <div class="rateAPY">APY</div>
+    </div>
+</body>
+
+</html>
